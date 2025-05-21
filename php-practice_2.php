@@ -1,21 +1,22 @@
 <?php
 // Q1 tic-tac問題
-$maxNum = 100;
-for ($i = 0; $i < $maxNum; $i++) {
-  $arrayNum[$i] = $i + 1;
-}
+function countTicTac($maxNum) {
+  echo '1から' . $maxNum . 'までのカウントを開始します' . "\n";
+  for ($i = 0; $i < $maxNum; $i++) {
+    $arrayNum[$i] = $i + 1;
 
-foreach ($arrayNum as $val) {
-  if ($val % 4 === 0 && $val % 5 === 0){
-    echo 'tic-tac' . "\n";
-  } else if ($val % 4 === 0) {
-    echo 'tic' . "\n";
-  } elseif ($val % 5 === 0) {
-    echo 'tac' . "\n";
-  } else {
-    echo $val . "\n";
+    if ($arrayNum[$i] % 4 === 0 && $arrayNum[$i] % 5 === 0) {
+      echo 'tic-tac' . "\n";
+    } else if ($arrayNum[$i] % 4 === 0) {
+      echo 'tic' . "\n";
+    } elseif ($arrayNum[$i] % 5 === 0) {
+      echo 'tac' . "\n";
+    } else {
+      echo $arrayNum[$i] . "\n";
+    }
   }
 }
+countTicTac(100);
 
 // Q2 多次元連想配列
 $personalInfos = [
